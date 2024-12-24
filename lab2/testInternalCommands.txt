@@ -1,0 +1,37 @@
+Script started on 2023-10-04 21:31:49-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="44"]
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ ./shell
+%> pwd
+/home/19jrg4/elec377-thurs-3/lab2
+%> cd
+%> pwd
+/home/19jrg4
+%> cd elec377-thurs-3/lab2
+%> pwd
+/home/19jrg4/elec377-thurs-3/lab2
+%> ls
+hello.c
+testSplitCommand.txt
+Makefile
+testInternalCommands.txt
+shell.c
+shell
+hello
+%> ls -a
+.
+hello.c
+testSplitCommand.txt
+..
+Makefile
+testInternalCommands.txt
+shell.c
+shell
+hello
+%> ls -howdy
+ERROR: Only allowed second parameter is '-a'!
+%> exit h sneaky
+ERROR: Exit has no arguments! | Expecting one word (exit)
+%> exit
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ exit
+exit
+
+Script done on 2024-10-04 21:33:51-04:00 [COMMAND_EXIT_CODE="0"]

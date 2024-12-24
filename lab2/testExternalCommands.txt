@@ -1,0 +1,65 @@
+Script started on 2024-10-04 22:18:28-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="44"]
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ ./shell 
+%> hello
+Hello 19jrg4
+%> pwd
+/home/19jrg4/elec377-thurs-3/lab2
+%> invalid_command
+ERROR:Command not found!
+%> ls
+testExternalCommands.txt
+hello.c
+testSplitCommand.txt
+Makefile
+testInternalCommands.txt
+shell.c
+shell
+hello
+%> mkdir test_dir
+%> ls
+testExternalCommands.txt
+hello.c
+test_dir
+testSplitCommand.txt
+Makefile
+testInternalCommands.txt
+shell.c
+shell
+hello
+%> cd test_dir
+%> pwd
+/home/19jrg4/elec377-thurs-3/lab2/test_dir
+%> ls
+%> touch test_file
+%> ls
+test_file
+%> cd..     ..
+%> pwd
+/home/19jrg4/elec377-thurs-3/lab2
+%> ls
+testExternalCommands.txt
+hello.c
+test_dir
+testSplitCommand.txt
+Makefile
+testInternalCommands.txt
+shell.c
+shell
+hello
+%> rm -r test_dir
+%> ls
+testExternalCommands.txt
+hello.c
+testSplitCommand.txt
+Makefile
+testInternalCommands.txt
+shell.c
+shell
+hello
+%> cd boo^M
+Was unable to change directory!^M
+%> exit
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ exit
+exit
+
+Script done on 2024-10-04 22:20:17-04:00 [COMMAND_EXIT_CODE="0"]

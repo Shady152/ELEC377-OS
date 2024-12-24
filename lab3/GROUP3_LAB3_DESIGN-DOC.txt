@@ -1,0 +1,30 @@
+Team Members:
+Jose Ramon Gonzalez
+Group: 3
+Lab 3
+
+PROBLEM DESCRIPTION:
+
+The purpose of this lab was to use pthread mutexes and condition variables to synchronize threads. This is done to implement a multi-threaded solution to the producer consumer problem. Where the producer reads data from a file specific to it and writes it to a buffer from where a consumer will read data and write it to its corresponding output file. Some constraints are that the producer cannot overwrite the buffer and the consumer cannot read from an empty buffer. Additionally, the data all of the data from the producer(s) must be read by the consumer(s), the data cannot be duplicated, and the data must be in the same order that it was read by the producer(s) in the output.
+
+
+EXPLANATION OF SOLUTION:
+
+Producer Function:
+The producer implementation opens the data file and reads the values of its corresponding file line by line. It then stores the number it read as an integer and puts it in the buffer. Before accessing the buffer the mutex is locked and if the buffer is full the producer is set to wait on the full condition until space is available. Once space is available the value is added to the current head of the buffer and the head is updated along with the number of elements. After this is done the producer signals to the consumer(s) that there is data in the buffer followed by unlocking the mutex.
+
+Once a producer has read all the data from its file then it locks the mutex and decrements the number of running producers. If the number of running producers is now 0 are decrementing then the thread broadcasts the empty condition variable to wake up all the consumers that are currently waiting. Finally, the mutex is unlocked, the file is closed, and NULL is returned.
+
+Consumer Function:
+The consumer implementation makes a file where it will save its data and reads information from the buffer to then write to its corresponding out file. A similar process is followed by the consumer as the producer. It starts by locking the mutex and checking if there is data in the buffer for it to read. If there is no data in the buffer then the consumer is set to wait on the empty condition until there is data in the buffer. Once a value if read from the tail of the buffer the consumer then updates the tail and the number of elements of the buffer. Following, the consumer signals the full condition variable to the producer threads that are waiting to wake them up. The mutex is then unlocked and data is then written to the consumers corresponding output file.
+
+If the number of elements in the buffer is zero and the number of producers is also zero then the consumer unlocks the mutex and breaks from the loop. Since there is now no more data the consumer closes its corresponding output file and returns NULL.
+
+Main Function:
+The main function assigns the thread variables and parses through the command-line to assign the given test, producer, and consumer numbers. The function also ensures that the given parameters are sufficient and within the expected bounds; which is this case both the producer and consumer number should be less than 5 and greater than 0. Additionally, the function also initializes the the producer and consumer threads and attaches the corresponding input and output files to them. The thread information is stored in the threadParam struct, which contains a string with the file name that the thread will read/write from/to and the thread number which acts as the thread id. Finally, once the threads complete it joins them.
+
+Simulate Interrupt Function:
+The function has a probability of 33% to call the sched_yield function to simulate interrupts. This forces the program to context switch if another thread is able to run; this all would make the program more nondeterministic.
+
+Special C Language Features:
+The program uses the pthread library to create and manage threads concurrently. Accordingly, mutexes are used to synchronize the generated threads to ensure that only one threads can access the critical section of the program at once. Along with mutexes condition variables are used such as full and empty to manage wait and signal when certain conditions are met. Finally, file io from the C standard libraries is used for error handling, and reading and writing to files; functions such as fopen, fclose, fprintf, and fgets are used. The srand48 and drand48 function are also used for random number generation for the simulate_interrupt function.

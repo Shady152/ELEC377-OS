@@ -1,0 +1,24 @@
+Team Members:
+Jose Ramon Gonzalez
+Group: 3
+Lab 4
+
+Problem:
+The purpose of this lab was to use shell programming to show information regrading what processes are running on the system like that of the ps command. Here we write our own version of the ps command where the pid and process owner are always shown regardless of the input parameters. Additional information such as the resident size process, command the process is executing, the command line used to the start the process, and the gid is available; this information can be shown by using the flags -rss, -comm, -command, and -group respectively.
+To accomplish this we use a shell script called ps.sh which we made executable using chmod a+x ps.sh. Further the flags mentioned above are what is passed into the script as parameters.
+
+Phase 1:
+Here we had to parse the command line using the shift command and enable the flags. This was done by first declaring the flags boolean variables and initializing to 0; the variables are called show_rss, show_comm, show_cl, and show_group. Then we entered a while loop that broke when there were no more arguments, and in this loop we had an if-else statement that assigned the flag a value of 1 if it was included as an argument. In the case that an argument was not recognized then an error was thrown; further, if the flags -comm and -command were both passed the script threw and error since they are mutually exclusive.
+
+Phase 2:
+Here we iterated over the process directories to extract the data we want. First we made a temporary file to store the information and we then proceeded into the for-loop which uses the /proc/[0-9]* pattern and contains an if-statement to ensure that the directory we are checking exists using the [[ -d $p ]] condition. 
+
+Phase 3: 
+Inside of the if-statement we use grep and awk to save there relevant information, such as what was mentioned above, to variables. However, for the command line we need to replace the null-chars with spaces using tr. After we check if the cmd_line and rss variables have length 0. If cmd_line has length of 0 then it indicates that no command line was used so we set the value of cmd_line to be the same as name; additionally, if rss has a lengths of 0 then we set it to be 0.
+The uid and gid are given in numeric variables and as such we must convert them to the symbolic names to make them human readable. This was done by searching in /etc/passwd and /etc/group and extracting the symbolic uid and gid from them. This was done by using grep and the cut command to extract and pipe the first column using cut -d: -f1 to the desired variable.
+
+Phase 4:
+We pipe our information into the temporary file mentioned earlier. First, we use printf and append redirection (>>) to put the pid and user into the temp file. After we have a series of if statements that check the flags mentioned above and if they have a value of 1 then their respective information gets piped into the temp file in the same way as pid and user. In an attempt to keep the columns neatly aligned the information is piped into the temp file with two tab chars preceding the information. Finally, after the if-statements we put a new line char at the end.
+
+Phase 5:
+After the loop has finished and all the data is in the temp file we print the columns that we want to show. In this case we always print PID and USER, and then we have if-statements check the flags and if the flags have a value of 1 then they print the corresponding column header, and at the end we have a new line char. Further, we use sort -n to numerically sort the rows in the temp file by the first column, which then gets printed to the screen. Finally, we delete the temp file and then exit the program.

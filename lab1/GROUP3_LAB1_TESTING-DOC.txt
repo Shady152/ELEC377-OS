@@ -1,0 +1,20 @@
+Team Members: 
+Jose Ramon Gonzalez
+Group: 3
+Lab 1
+
+TESTING:
+
+For testing we generated four different output files of the /proc/lab1 file. The commands we used for testing were "cat" and "dd" and the output files were titled lab1.out1,
+lab1.out1_root, lab1.out2, and lab1.out3. The files lab1.out1, lab1.out1_root, and lab1.out3 were created using "cat" as follows, (using .out1 as an example)
+
+cat /proc/lab1 > lab1.out1
+
+where lab1.out1_root was run as root using the "sudo -s" command and lab1.out3 was run by the other group member from their session. Additionally, lab1.out2 was created using dd as follows,
+
+dd if=/proc/lab1 of=lab1.out2
+
+The first difference and sign that the output are correct is the Name field. Only lab1.out2 should "dd" in the field while the rest show "cat", further, the differences between files in the 
+PID and PPID fields is another good indicator, as well, as the State field being "Running" for all. Other good indicators are the UID and GIDs between files. The files lab1.out1 and 
+lab1.out2 were run by the same user and lab1.out3 was run by a different user so the fact that the UID fields for lab1.out1 and lab1.out2 are the same while being different from lab1.out3 
+helps to verify our testing. This along with the fact that the UID and GID fields for the lab1.out1_root file are 0 gives us a good level of certainty in out modules correctness.

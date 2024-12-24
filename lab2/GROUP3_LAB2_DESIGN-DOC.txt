@@ -1,0 +1,64 @@
+﻿Team Members:
+Jose Ramon Gonzalez
+Group: 3
+Lab 2
+
+PROBLEM DESCRIPTION:
+The lab involves creating a shell that can execute simple commands, with built-in support for "exit", "pwd", "ls", and "cd". The shell should parse user input, 
+separating the command from its parameters. It must execute internal commands, and if not found, search the system for external programs. The shell should handle 
+errors for nonexistent commands, execution failures, or insufficient parameters. The implementation uses C language features like pointer arithmetic, function 
+pointers, and dynamic memory allocation.
+
+EXPLANATION OF SOLUTION:
+The shell reads input from the command line, splits it into individual words, and counts the total number of words. It then checks if there are enough arguments; 
+next, the shell looks for an internal implementation of the command. If none is found, it searches for an external one. If a valid implementation is found, the 
+command is executed; otherwise, the shell prints an error. The command buffer stores the shell input.
+
+Separating Shell Input:
+The splitCommandLine function splits the shell input and returns the total number of words. It uses strchr and skipChar to locate word boundaries in the command 
+buffer, storing pointers to the words in the args array and adding a null character (\0) at the end of each word as it goes. The function checks if the command 
+buffer is null or if the argument limit is exceeded, printing an error if too many arguments are provided.
+
+Internal Command Check and Execution:
+The doInternalCommand function checks if a command has an internal implementation and executes it if found, returning 1. Otherwise, it returns 0. Internal 
+commands are stored in an array of cmdData structs, each containing a command name and its corresponding function pointer. The function iterates through this 
+array, comparing the input command with the stored names. If a match is found, it calls the function pointer to execute the command and returns 1. If no match 
+is found, it reaches a null pointer and returns 0.
+
+skipChar:
+Takes a character array and a character that we want to skip. Uses pointer arithmetic to skip the chosen character until the current character is different from 
+the selected character. Returns a pointer to the next character that is not the one we want to skip.
+
+Exit Command:   
+Checks that the number of words is 1 if not then it prints an error else it uses the exit(0) command to exit the shell implementation. Returns void.
+
+PWD Command:    
+Prints the working directory. Checks that the number of words is 1 if not then it prints and error else it uses the getcwd to get the working directory, prints 
+it to the terminal.
+
+Ls Command:     
+Lists the files in the current directory. If no parameters then all non-hidden files are printed else if parameter -a is included then all files including hidden 
+files are printed else the function prints an error and returns void. Uses scandir to get the directory entries and is_hidden to test for hidden files.
+
+Cd Command:     
+Uses the chdir function to change the current directory to the desired one. Checks the number of parameters, if none are given then the function gets the current 
+users passwd entry and send them to their home directory. Else if possible it send them to the desired directory; if chdir fails then an error is printed and 
+returns void. Also if more that 2 parameters are given then the function prints an error and returns void.
+
+is_hidden:      
+Checks if the 1st char of a file is '.' if so returns 1 else returns 0.
+
+External Command Check and Execution:
+The doExternalCommand function searches the system for a requested command and executes it. It returns 1 if successful, otherwise 0. The function checks 
+directories like ".", "/bin", and "/usr/bin" using the stat function to determine if the command exists. If the file exists and is regular and executable then 
+the loop breaks. If found, the process is forked: the child process uses execv to run the command, while the parent waits. If the child process creation fails an 
+error is printed and the function returns 0; if the executable is not found, function returns 0 as well.
+
+
+Special C Language Features:
+Pointer Arithmetic: 
+Used for parsing through arrays such as the command buffer in the skipChar function.
+Function Pointers: 
+Used for command execution by calling the pointer to the chosen commands function.
+Dynamic Memory Allocation: U
+sed for allocating enough memory for different command paths such as in doExternalCommand.

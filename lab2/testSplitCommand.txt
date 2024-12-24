@@ -1,0 +1,36 @@
+Script started on 2024-10-03 16:59:57-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="190" LINES="46"]
+]-1;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ ./shell
+%>       A basic sentence
+3
+0: A
+1: basic
+2: sentence
+3: (nil)
+%>    leading spaces
+2
+0: leading
+1: spaces
+2: (nil)
+%> trailing spaces   
+2
+0: trailing
+1: spaces
+2: (nil)
+%>    a cursed  construction    just to see    see  
+6
+0: a
+1: cursed
+2: construction
+3: just
+4: to
+5: see
+6: (nil)
+%> exit
+1
+0: exit
+1: (nil)
+%> ^C
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ script[K[K[K[K[K[Kexit
+exit
+
+Script done on 2024-10-03 17:02:17-04:00 [COMMAND_EXIT_CODE="130"]

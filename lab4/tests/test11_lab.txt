@@ -1,0 +1,101 @@
+PID		USER		GROUP		CMD LINE
+1		root		root		/sbin/init
+2		root		root		kthreadd
+3		root		root		rcu_gp
+4		root		root		rcu_par_gp
+6		root		root		kworker/0:0H-kblockd
+8		root		root		mm_percpu_wq
+9		root		root		ksoftirqd/0
+10		root		root		rcu_sched
+11		root		root		migration/0
+12		root		root		idle_inject/0
+14		root		root		cpuhp/0
+15		root		root		kdevtmpfs
+16		root		root		netns
+17		root		root		rcu_tasks_kthre
+18		root		root		kauditd
+19		root		root		khungtaskd
+20		root		root		oom_reaper
+21		root		root		writeback
+22		root		root		kcompactd0
+23		root		root		ksmd
+24		root		root		khugepaged
+70		root		root		kintegrityd
+71		root		root		kblockd
+72		root		root		blkcg_punt_bio
+73		root		root		tpm_dev_wq
+74		root		root		ata_sff
+75		root		root		md
+76		root		root		edac-poller
+77		root		root		devfreq_wq
+78		root		root		watchdogd
+80		root		root		kswapd0
+81		root		root		ecryptfs-kthrea
+83		root		root		kthrotld
+84		root		root		acpi_thermal_pm
+85		root		root		khvcd
+86		root		root		scsi_eh_0
+87		root		root		scsi_tmf_0
+88		root		root		scsi_eh_1
+89		root		root		scsi_tmf_1
+91		root		root		vfio-irqfd-clea
+93		root		root		ipv6_addrconf
+102		root		root		kstrp
+105		root		root		kworker/u3:0
+118		root		root		charger_manager
+152		root		root		kworker/0:1H-kblockd
+197		root		root		raid5wq
+240		root		root		jbd2/vda1-8
+241		root		root		ext4-rsv-conver
+276		root		root		hwrng
+313		root		root		/lib/systemd/systemd-journald
+336		root		root		bpfilter_umh
+363		root		root		/lib/systemd/systemd-udevd
+496		root		root		kaluad
+497		root		root		kmpath_rdacd
+498		root		root		kmpathd
+499		root		root		kmpath_handlerd
+500		root		root		/sbin/multipathd		-d		-s
+513		root		root		loop0
+516		root		root		loop2
+517		root		root		loop3
+518		root		root		loop4
+522		root		root		loop5
+537		systemd-timesync		systemd-timesync		/lib/systemd/systemd-timesyncd
+584		systemd-network		systemd-network		/lib/systemd/systemd-networkd
+586		systemd-resolve		systemd-resolve		/lib/systemd/systemd-resolved
+629		root		root		/usr/lib/accountsservice/accounts-daemon
+632		root		root		/usr/sbin/cron		-f
+633		messagebus		messagebus		/usr/bin/dbus-daemon		--system		--address=systemd:		--nofork		--nopidfile		--systemd-activation		--syslog-only
+641		root		root		/usr/bin/python3		/usr/bin/networkd-dispatcher		--run-startup-triggers
+642		root		root		/usr/lib/policykit-1/polkitd		--no-debug
+644		syslog		syslog		/usr/sbin/rsyslogd		-n		-iNONE
+647		root		root		/usr/lib/snapd/snapd
+649		root		root		/lib/systemd/systemd-logind
+652		root		root		/usr/lib/udisks2/udisksd
+655		root		root		/usr/sbin/atd		-f
+670		root		root		/sbin/agetty		-o		-p		--		\u		--keep-baud		115200,38400,9600		hvc0		vt220
+671		root		root		/sbin/agetty		-o		-p		--		\u		--keep-baud		115200,38400,9600		ttyS0		vt220
+677		root		root		/sbin/agetty		-o		-p		--		\u		--noclear		tty1		linux
+701		root		root		/usr/sbin/ModemManager
+702		root		root		sshd:		/usr/sbin/sshd		-D		[listener]		0		of		10-100		startups
+734		root		root		/usr/bin/python3		/usr/share/unattended-upgrades/unattended-upgrade-shutdown		--wait-for-signal
+8611		root		root		xfsalloc
+8612		root		root		xfs_mru_cache
+20431		root		root		loop6
+98166		root		root		loop1
+136865		root		root		/usr/sbin/qemu-ga
+164987		root		root		kworker/0:0-cgroup_destroy
+165144		root		root		kworker/u2:0-events_power_efficient
+165159		root		root		kworker/0:1-events
+165279		root		root		kworker/u2:2-events_power_efficient
+192750		root		root		kworker/0:2-cgroup_destroy
+192763		root		root		sshd:		22aek		[priv]
+192771		22aek		sysops		/lib/systemd/systemd		--user
+192772		root		root		kworker/0:3-events
+192778		22aek		sysops		(sd-pam)
+192857		22aek		sysops		sshd:		22aek@pts/0
+192858		22aek		sysops		-bash
+192885		root		root		kworker/u2:1-events_power_efficient
+192886		22aek		sysops		/bin/bash		./ps_tests.sh
+218242		22aek		sysops		/bin/bash		./ps.sh		-command		-group

@@ -1,0 +1,33 @@
+Team Members:
+Jose Ramon Gonzalez
+Group: 3
+Lab 2
+
+TESTING:
+To ensure that the shell was implemented properly 4 tests were performed. In these 4 tests we tested that the shell split the input correctly, that the internal 
+commands worked, that the external commands worked, and that we got the same results from the default shell. The input and output were recorded using the script 
+command.
+
+The shell splitting was tested by printing the contents of the args array to the screen for a given input. Here we started by running the shell using ./shell. 
+First a normal sentence with regular spacing was tested, which output the correct words including the null character. Following this two words with leading 
+spaces were tested. After two words with trailing spaces was tested. Then a sentence with leading and trailing spaced along with multiple spaces between the 
+words. Finally a single word was tested. All these tests produced the correct output including the null character at the end of the sentence. This can be seen in 
+the "testSplitCommand.txt" file.
+
+The internal commands were tested using the script command as well. Pwd was ran first to show the current working directory then cd was run to go to the home 
+directory followed by pwd to show that we had in fact been sent to the home directory; following we ran the cd command with the lab2 directory followed by pwd to 
+show that we had been taken back to the lab2 directory. After the ls command was tested which showed all non-hidden files in the directory; following this ls -a 
+was run which showed all files in the lab2 directory including the hidden ones. The ls command was further tested as ls -howdy to ensure that the error handling 
+was working as the internal implementation of ls allows either -a as a parameter or no parameters. Finally, the implementation of exit was tested, which resulted 
+in us successfully exiting the shell implementation. The results of this testing showed that the internal function were implemented correctly; this can be seen 
+in the "testInternalCommands.txt" file.
+
+The external commands were also tested using the script command. The hello command was ran first to ensure that it out put "Hello *netID*". The phrase 
+"invalid_command" was run to ensure that the implementation would output an error if an invalid command was given. The mkdir command, which is in /usr/bin, was 
+ran to create a directory called "test_dir", we then used cd to go into test_dir where we then used touch to create a file called "test_file"; its existance was 
+then verified by using ls. We then went back to the lab2 directory by using cd ..; from there we then used rm -r test_dir to delete test_dir and its contents; 
+this was confirmed using ls. Finally, we tested that cd would print an error if an invalid directory was given. The results from this test showed that the 
+external command search was implemented correctly in the shell; the results can be seen in the "testExternalCommands.txt" file.
+
+Finally the same commands for both the internal and external commands were run in the default shell to verify that the we had the correct output. This test 
+showed that our implementation of our shell was correct. These results can be found in the "testShellComparison.txt" file.

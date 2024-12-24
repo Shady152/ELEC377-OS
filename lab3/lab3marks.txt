@@ -1,0 +1,8 @@
+Documentation 2.5/3
+Solution 3/3
+Clarity 2/2
+Testing 2/2
+Total: 9.5/10
+
+Comments: 
+- well done! was looking for a bit more description about the shared buffer and other shared resources

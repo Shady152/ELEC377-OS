@@ -1,0 +1,101 @@
+    PID USER     COMMAND                     GROUP
+      1 root     /sbin/init                  root
+      2 root     [kthreadd]                  root
+      3 root     [rcu_gp]                    root
+      4 root     [rcu_par_gp]                root
+      6 root     [kworker/0:0H-kblockd]      root
+      8 root     [mm_percpu_wq]              root
+      9 root     [ksoftirqd/0]               root
+     10 root     [rcu_sched]                 root
+     11 root     [migration/0]               root
+     12 root     [idle_inject/0]             root
+     14 root     [cpuhp/0]                   root
+     15 root     [kdevtmpfs]                 root
+     16 root     [netns]                     root
+     17 root     [rcu_tasks_kthre]           root
+     18 root     [kauditd]                   root
+     19 root     [khungtaskd]                root
+     20 root     [oom_reaper]                root
+     21 root     [writeback]                 root
+     22 root     [kcompactd0]                root
+     23 root     [ksmd]                      root
+     24 root     [khugepaged]                root
+     70 root     [kintegrityd]               root
+     71 root     [kblockd]                   root
+     72 root     [blkcg_punt_bio]            root
+     73 root     [tpm_dev_wq]                root
+     74 root     [ata_sff]                   root
+     75 root     [md]                        root
+     76 root     [edac-poller]               root
+     77 root     [devfreq_wq]                root
+     78 root     [watchdogd]                 root
+     80 root     [kswapd0]                   root
+     81 root     [ecryptfs-kthrea]           root
+     83 root     [kthrotld]                  root
+     84 root     [acpi_thermal_pm]           root
+     85 root     [khvcd]                     root
+     86 root     [scsi_eh_0]                 root
+     87 root     [scsi_tmf_0]                root
+     88 root     [scsi_eh_1]                 root
+     89 root     [scsi_tmf_1]                root
+     91 root     [vfio-irqfd-clea]           root
+     93 root     [ipv6_addrconf]             root
+    102 root     [kstrp]                     root
+    105 root     [kworker/u3:0]              root
+    118 root     [charger_manager]           root
+    152 root     [kworker/0:1H-kblockd]      root
+    197 root     [raid5wq]                   root
+    240 root     [jbd2/vda1-8]               root
+    241 root     [ext4-rsv-conver]           root
+    276 root     [hwrng]                     root
+    313 root     /lib/systemd/systemd-journa root
+    336 root     bpfilter_umh                root
+    363 root     /lib/systemd/systemd-udevd  root
+    496 root     [kaluad]                    root
+    497 root     [kmpath_rdacd]              root
+    498 root     [kmpathd]                   root
+    499 root     [kmpath_handlerd]           root
+    500 root     /sbin/multipathd -d -s      root
+    513 root     [loop0]                     root
+    516 root     [loop2]                     root
+    517 root     [loop3]                     root
+    518 root     [loop4]                     root
+    522 root     [loop5]                     root
+    537 systemd+ /lib/systemd/systemd-timesy systemd-timesync
+    584 systemd+ /lib/systemd/systemd-networ systemd-network
+    586 systemd+ /lib/systemd/systemd-resolv systemd-resolve
+    629 root     /usr/lib/accountsservice/ac root
+    632 root     /usr/sbin/cron -f           root
+    633 message+ /usr/bin/dbus-daemon --syst messagebus
+    641 root     /usr/bin/python3 /usr/bin/n root
+    642 root     /usr/lib/policykit-1/polkit root
+    644 syslog   /usr/sbin/rsyslogd -n -iNON syslog
+    647 root     /usr/lib/snapd/snapd        root
+    649 root     /lib/systemd/systemd-logind root
+    652 root     /usr/lib/udisks2/udisksd    root
+    655 daemon   /usr/sbin/atd -f            daemon
+    670 root     /sbin/agetty -o -p -- \u -- root
+    671 root     /sbin/agetty -o -p -- \u -- root
+    677 root     /sbin/agetty -o -p -- \u -- root
+    701 root     /usr/sbin/ModemManager      root
+    702 root     sshd: /usr/sbin/sshd -D [li root
+    734 root     /usr/bin/python3 /usr/share root
+   8611 root     [xfsalloc]                  root
+   8612 root     [xfs_mru_cache]             root
+  20431 root     [loop6]                     root
+  98166 root     [loop1]                     root
+ 136865 root     /usr/sbin/qemu-ga           root
+ 164987 root     [kworker/0:0-cgroup_destroy root
+ 165144 root     [kworker/u2:0-flush-252:0]  root
+ 165159 root     [kworker/0:1-events]        root
+ 165279 root     [kworker/u2:2-events_power_ root
+ 192750 root     [kworker/0:2-cgroup_destroy root
+ 192763 root     sshd: 22aek [priv]          root
+ 192771 22aek    /lib/systemd/systemd --user sysops
+ 192772 root     [kworker/0:3-events]        root
+ 192778 22aek    (sd-pam)                    sysops
+ 192857 22aek    sshd: 22aek@pts/0           sysops
+ 192858 22aek    -bash                       sysops
+ 192885 root     [kworker/u2:1-events_power_ root
+ 192886 22aek    /bin/bash ./ps_tests.sh     sysops
+ 220546 22aek    ps -eo pid,user,command,gro sysops

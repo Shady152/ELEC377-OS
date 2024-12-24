@@ -1,0 +1,58 @@
+Team Members:
+Jose Ramon Gonzalez
+Group: 3
+Lab 1
+
+PROBLEM DESCRIPTION:
+
+The purpose of Lab1 is to create a kernel module titled "lab1" to get the process information from the process control block and save the information to the proc directory.
+The process information is in a /proc information file with the following formatting;
+
+Current Process PCB Information
+Name = sss
+PID = ddd
+PPID = ddd
+State = sss
+Real UID = ddd
+Effective UID = ddd
+Saved UID = ddd
+Real GID = ddd
+Effective GID = ddd
+Saved GID = ddd
+
+where "sss" represents a string and "ddd" represents and integer value.
+
+EXPLANATION OF SOLUTION:
+
+The module is initialized in the lab1_init function where a /proc/lab1 entry is made using the proc_create function; this allows us to to retrieve the process information.
+Further if the proc_create function returns NULL then the process creation has failed; in this case the module returns an error in the form of -ENOMEM.
+
+The values that we are searching for are taken and printed to a file, this is done in the lab1_show function. We use the current process task_struct to get the process Name, PID, PPID, 
+and State. We got the Name by accessing "comm" (current->comm), PID by accessing "pid" (current->pid), PPID by using the task_ppid_nr function (task_ppid_nr(current)), 
+and State by accessing "state" (current->state).
+
+For the State of the process specifically we had to perform some case handling since there are four possible states that it can give us. 
+
+These states are defined as follows,
+TASK_RUNNING                    0x0000
+TASK_INTERRUPTIBLE              0x0001
+TASK_UNINTERRUPTIBLE            0x0002
+__TASK_STOPPED                  0x0004
+
+as a result we used a switch case statement where if we had "TASK_RUNNING" we would print "Running", if we had "__TASK_STOPPED" we would print "Stopped", otherwise we would default
+to print "Waiting".
+
+Finally to access the UID and GID information we accessed the cred struct by first defining a pointer to it using the current_cred function from there we simply accessed the
+structure information. We accessed the Real, Effective, and Saved UID and GID.
+
+cred->uid.val
+cred->euid.val
+cred->suid.val
+cred->gid.val
+cred->egid.val
+cred->sgid.val
+
+We define the operation mappings in the lab1_flops struct to give functionality to the entry in /proc/lab1. The file is comprised of function pointers that determine what actions will
+be taken when the file is closed, opened, or read.
+
+When unloading the module the lab1_exit function uses the removed_proc_entry function to remove the /proc/lab1 entry.

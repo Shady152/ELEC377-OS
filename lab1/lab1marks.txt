@@ -1,0 +1,11 @@
+
+
+Documentation 2.5/3
+Solution 3/3
+Clarity 2/2
+Testing 2/2
+Total: 9.5/10
+
+Comments: 
+- great outputs
+- documentation needed more description of how the different parts link together 

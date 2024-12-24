@@ -1,0 +1,60 @@
+Script started on 2024-10-07 22:59:05-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="94" LINES="44"]
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ echo internal_commands
+internal_commands
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ pwd
+/home/19jrg4/elec377-thurs-3/lab2
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ cd
+]0;19jrg4@elec377-thurs-3: ~[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~[00m$ pwd
+/home/19jrg4
+]0;19jrg4@elec377-thurs-3: ~[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~[00m$ cd elec377-thurs-3/lab2/
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ ped
+
+Command 'ped' not found, but there are 16 similar ones.
+
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ pwd
+/home/19jrg4/elec377-thurs-3/lab2
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ ls
+Makefile  hello.c  shell.c                   testInternalCommands.txt  testSplitCommand.txt
+[0m[01;32mhello[0m     [01;32mshell[0m    testExternalCommands.txt  testShellComparison.txt
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ ls -a
+[0m[01;34m.[0m         [01;32mhello[0m    shell.c                   testShellComparison.txt
+[01;34m..[0m        hello.c  testExternalCommands.txt  testSplitCommand.txt
+Makefile  [01;32mshell[0m    testInternalCommands.txt
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ ls -howdy
+ls: invalid line width: ‘dy’
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ echo external_commands
+external_commands
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ ./hello
+Hello 19jrg4
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ pwd
+/home/19jrg4/elec377-thurs-3/lab2
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ invalid_command
+invalid_command: command not found
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ ls
+Makefile  hello.c  shell.c                   testInternalCommands.txt  testSplitCommand.txt
+[0m[01;32mhello[0m     [01;32mshell[0m    testExternalCommands.txt  testShellComparison.txt
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ mkdir test_dir
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ ls
+Makefile  hello.c  shell.c                   testInternalCommands.txt  testSplitCommand.txt
+[0m[01;32mhello[0m     [01;32mshell[0m    testExternalCommands.txt  testShellComparison.txt   [01;34mtest_dir[0m
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ cd test_dir
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2/test_dir[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2/test_dir[00m$ pwd
+/home/19jrg4/elec377-thurs-3/lab2/test_dir
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2/test_dir[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2/test_dir[00m$ ls
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2/test_dir[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2/test_dir[00m$ touch test_file
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2/test_dir[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2/test_dir[00m$ ls
+test_file
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2/test_dir[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2/test_dir[00m$ cd ..
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ pwd
+/home/19jrg4/elec377-thurs-3/lab2
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ ls
+Makefile  hello.c  shell.c                   testInternalCommands.txt  testSplitCommand.txt
+[0m[01;32mhello[0m     [01;32mshell[0m    testExternalCommands.txt  testShellComparison.txt   [01;34mtest_dir[0m
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ rm -r test_dir
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ ls
+Makefile  hello.c  shell.c                   testInternalCommands.txt  testSplitCommand.txt
+[0m[01;32mhello[0m     [01;32mshell[0m    testExternalCommands.txt  testShellComparison.txt
+]0;19jrg4@elec377-thurs-3: ~/elec377-thurs-3/lab2[01;32m19jrg4@elec377-thurs-3[00m:[01;34m~/elec377-thurs-3/lab2[00m$ exit
+exit
+
+Script done on 2024-10-07 23:02:12-04:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,24 @@
+Team Members:
+Jose Ramon Gonzalez
+Group: 3
+Lab 4
+
+TESTING:
+There are 3 types of testings that need to be done to determine if the script is working as expected. Testing with no parameters, error testing, and testing with a combination of different parameters. Testing with no parameters was done in test 0, the error tests were done in tests 12 and 13, and the rest of the tests are different combinations of the -rss, -group, -comm, and -command flags.
+
+To do the testings a script called ps_test.sh was written which ran the system ps command and the lab ps.sh script with the same parameters, the results of the tests were saved to test files in the tests directory. The files are named testx_lab/sys.txt where x is the test number and the lab/sys termination is to indicate if the saved data is from the systems ps of the labs ps.sh. Note that tests 12 and 13 did not have a system version since they were to test if the error handling worked.
+
+The ps_test.sh script not only runs the lab and sys versions of ps but also pipes the output of both to different text files that are created and saved to the tests directory so that they can be compared easily.
+
+ERROR HANDLING:
+Test 12 found in the tests directory was made to test if the program gave an error if the -comm and -command flags were both passed as arguments. From the results we can see that the error handling for this works as expected.
+
+Test 13 found in the tests directory was made to test if an unknown argument was passed into ps.sh and throw an error. From the results we can see that the error handling for this works as expected.
+
+NO ARGUMENTS: (TEST 0)
+The version with no arguments was used to confirm that our script had the correct functionality. From this we could see that the lab and sys implementations of ps had some differences in the last row for the pid. This could be due to the fact that every time the script is called it is a different process, which would thus have unique pids.
+
+DIFFERENT ARGUMENTS:
+The rest of the tests were inspected in the same was as test 0, that is visually. Here we found the same trends as in test 0, which can be explained by the previous explanation.
+
+All in all, the tests all passed and the script worked as intended. To see the testing outputs for all the tests please refer to the tests directory and the ps_test.sh for the testing configuration.

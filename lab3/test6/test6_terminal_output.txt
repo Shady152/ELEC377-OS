@@ -1,0 +1,507 @@
+Test Number 6
+Number of producers 1
+Number of consumers 3
+Main: starting producer 0 with file t60.dat
+Main: starting consumer 0 with file out60.dat
+Main: starting consumer 1 with file out61.dat
+Main: starting consumer 2 with file out62.dat
+Enter consumer 2
+Consumer thread 2 aquiring lock
+Enter consumer 1
+Consumer thread 1 aquiring lock
+Enter consumer 0
+Consumer thread 0 aquiring lock
+Enter producer 0
+Producer thread 0 obtaining lock for 1: 10
+Producer thread 0 adding 1: 10 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 1: 10 from position 0
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 2: 13
+Producer thread 0 adding 2: 13 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 1: 13 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 3: 16
+Producer thread 0 adding 3: 16 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Producer thread 0 obtaining lock for 4: 20
+Producer thread 0 adding 4: 20 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 1: 16 from position 2
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 2: 20 from position 0
+Consumer thread 2 aquiring lock
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 5: 23
+Producer thread 0 adding 5: 23 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 2: 23 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 6: 26
+Producer thread 0 adding 6: 26 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 3: 26 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 7: 30
+Producer thread 0 adding 7: 30 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 2: 30 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 8: 33
+Producer thread 0 adding 8: 33 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 3: 33 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 9: 36
+Producer thread 0 adding 9: 36 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 4: 36 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 10: 40
+Producer thread 0 adding 10: 40 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 3: 40 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 11: 43
+Producer thread 0 adding 11: 43 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 4: 43 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 12: 46
+Producer thread 0 adding 12: 46 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 5: 46 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 13: 50
+Producer thread 0 adding 13: 50 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 4: 50 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 14: 53
+Producer thread 0 adding 14: 53 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 5: 53 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 15: 56
+Producer thread 0 adding 15: 56 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 6: 56 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 16: 60
+Producer thread 0 adding 16: 60 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 5: 60 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 17: 63
+Producer thread 0 adding 17: 63 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 6: 63 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 18: 66
+Producer thread 0 adding 18: 66 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 7: 66 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 19: 70
+Producer thread 0 adding 19: 70 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 6: 70 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 20: 73
+Producer thread 0 adding 20: 73 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 7: 73 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 21: 76
+Producer thread 0 adding 21: 76 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 8: 76 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 22: 80
+Producer thread 0 adding 22: 80 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 7: 80 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 23: 83
+Producer thread 0 adding 23: 83 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 8: 83 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 24: 86
+Producer thread 0 adding 24: 86 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 9: 86 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 25: 90
+Producer thread 0 adding 25: 90 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 8: 90 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 26: 93
+Producer thread 0 adding 26: 93 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 9: 93 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 27: 96
+Producer thread 0 adding 27: 96 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 10: 96 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 28: 100
+Producer thread 0 adding 28: 100 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 9: 100 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 29: 103
+Producer thread 0 adding 29: 103 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 10: 103 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 30: 106
+Producer thread 0 adding 30: 106 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 11: 106 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 31: 110
+Producer thread 0 adding 31: 110 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 10: 110 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 32: 113
+Producer thread 0 adding 32: 113 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 11: 113 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 33: 116
+Producer thread 0 adding 33: 116 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 12: 116 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 34: 120
+Producer thread 0 adding 34: 120 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 11: 120 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 35: 123
+Producer thread 0 adding 35: 123 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 12: 123 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 36: 126
+Producer thread 0 adding 36: 126 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 13: 126 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 37: 130
+Producer thread 0 adding 37: 130 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 12: 130 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 38: 133
+Producer thread 0 adding 38: 133 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 13: 133 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 39: 136
+Producer thread 0 adding 39: 136 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 14: 136 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 40: 140
+Producer thread 0 adding 40: 140 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 13: 140 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 41: 143
+Producer thread 0 adding 41: 143 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 14: 143 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 42: 146
+Producer thread 0 adding 42: 146 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 15: 146 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 43: 150
+Producer thread 0 adding 43: 150 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 14: 150 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 44: 153
+Producer thread 0 adding 44: 153 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 15: 153 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 45: 156
+Producer thread 0 adding 45: 156 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 16: 156 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 46: 160
+Producer thread 0 adding 46: 160 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 15: 160 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 47: 163
+Producer thread 0 adding 47: 163 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 16: 163 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 48: 166
+Producer thread 0 adding 48: 166 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 17: 166 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 49: 170
+Producer thread 0 adding 49: 170 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 16: 170 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 50: 173
+Producer thread 0 adding 50: 173 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 17: 173 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 51: 176
+Producer thread 0 adding 51: 176 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 18: 176 from position 2
+Consumer thread 2 aquiring lock
+Producer thread 0 obtaining lock for 52: 180
+Producer thread 0 adding 52: 180 at position 0
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 0 waiting on empty
+Consumer thread 0 signaling full
+Consumer thread 0 releasing lock
+Consumer thread 0 pulled 17: 180 from position 0
+Consumer thread 0 aquiring lock
+Producer thread 0 obtaining lock for 53: 183
+Producer thread 0 adding 53: 183 at position 1
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 1 waiting on empty
+Consumer thread 1 signaling full
+Consumer thread 1 releasing lock
+Consumer thread 1 pulled 18: 183 from position 1
+Consumer thread 1 aquiring lock
+Producer thread 0 obtaining lock for 54: 186
+Producer thread 0 adding 54: 186 at position 2
+Producer thread 0 signaling empty
+Producer thread 0 releasing lock
+Consumer thread 2 waiting on empty
+Consumer thread 2 signaling full
+Consumer thread 2 releasing lock
+Consumer thread 2 pulled 19: 186 from position 2
+Consumer thread 2 aquiring lock
+Consumer thread 0 waiting on empty
+Exiting consumer 0
+Consumer thread 1 waiting on empty
+Exiting consumer 1
+Consumer thread 2 waiting on empty
+Exiting consumer 2
+Exit producer 0
