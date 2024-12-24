@@ -1,0 +1,10 @@
+./quoteserv 10000
+Return code: 0
+
+./client 10000
+Port Number  10000
+The quote server by Susan Murphy, MurphSoft
+Hi 377 Student, your quote is:
+The best way to predict the future is to invent it.
+ -- Alan Kay
+

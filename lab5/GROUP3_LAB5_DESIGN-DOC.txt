@@ -1,0 +1,26 @@
+Team Members:
+Jose Ramon Gonzalez 
+Group: 3
+Lab 5
+
+PROBLEM DEFINITION:
+Goal is to show the exploitation of a buffer overflow vulnerability in a client-server system to extract an MD5 hash from its environment variables, and show how such attacks in a 
+controlled environment work. We use selfcomp.c to understand the vulnerability and then applying the same concepts to remotely attack the server using a modified client.c. 
+The server is run by the quoteserv processes which requests and forks child processes to handle each connection. The server will crash in the case of an overflow attack.
+
+Buffer overflow vulnerabilites happen when a user input exceeds the allocated memory for a buffer, this allows the attacker to write over memory regions that are next to each other;
+this includes the return address on the stack. We edit the number of x's in an input string, to redirect the execution flow to our shellcodee. Here we manipulate the stack by sending a 
+string that takes advantage of the lack of bounds checking in the server's input handling.
+
+String Length: The exact length of the string required to overflow the buffer and overwrite the return address was determined during testing. This length includes padding to get to the 
+return address and the insert our code.
+Return Address: We use GDB to get the location of the return address on the stack by getting the rsp.
+Shellcode: The shellcode is a set of assembly instructions made to read the environment variables. This shellcode is embedded in the compromise string and executed when the return address 
+is overwritten.
+
+The exploit can be found in the exploit.nasm or exploit,lst files; and the code for the other process are fairly similar and can be found in the selcomp.c and client.c files.
+
+compromise1: A string constructed with the necessary padding in the form of x's to overwrite the rdp register
+compromise: Uses the information from compromise1 to insert shellcode and overwritten return address.
+exploit: manipulates the stack and CPU registers
+
